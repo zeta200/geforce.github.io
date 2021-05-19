@@ -1,0 +1,57 @@
+<html>													<!-- Starting the HTML file-->
+<head>													<!-- Header section of the file-->
+	<title> Interactive website  </title>				<!-- Title of the website -->
+	<link rel= "stylesheet" href= "style.css">			<!-- By using "href= "style.css", we are calling the external CSS file -->
+														<!-- We will use the same external CSS file for all our page's layout -->
+</head>													<!-- Closing the header section of the file-->
+<body>													<!-- Opening body section of the page-->
+	
+		<div class = "main">							<!-- Using the tag div, to declare that this is the main section of the page.
+														The attribute name is "main" and it will be used on CSS file to modify the background colour and decide hight and width of the pages-->
+		<nav>											<!-- Using the tag nav to declar, this is the navigation bar section-->
+			<div class = "logo"> <!-- section for the logo, calling the class logo, which will be used on the CSS file to change position and size of the logo-->
+				<a href = "Index.html"><img src = "images/logo.png"></a> <!--searching for the image .png and linking the logo to the indexp page --->
+			</div>
+			
+			<div class= "nav-links"> <!-- Attribut named nav-links, to contain a list of the words -->
+				<ul>				 <!-- Each word will be linked a specif page html page, so when ever is selected, the user will redirect to that page -->
+					<li><a href = "Index.html"> Home </a></li>                <!-- Redirect to index/home page-->
+					<li><a href = "RTX3080.html"> RTX 3080</a></li>           <!-- Redirect to second product page page-->
+					<li><a href = "RTX3070.html"> RTX 3070</a></li>           <!-- Redirect to third product page page-->
+					<li><a href = "Availability.html"> Availability </a></li> <!-- Redirect to availability page page-->
+				</ul>
+			</div>
+			
+			<div class = "header2"> 			<!-- This section under the attribute "header2", contains only a simple header text, which will be modified on the externa CSS file-->
+			<h2 > Check our retailers </h2>
+			</div>
+												<!-- Three button for each device -->
+												<!-- Each button contains a text inside to let the user know the name of the site selling that GPU, each button also are linked to that specfic website.-->
+			<div class= "buttons">				<!-- The attribute buttons is stated on the CSS file, to position, resize and colour the buttons-->
+				<div class="rtx3090">
+				<h2>RTX 3090</h2>				<!-- Simple header text, positionel on  the top of the buttons to let user know which website sells that spefic product-->
+				<button onclick=" window.open('https://www.ebuyer.com/nvidia/geforce-rtx-30-series', '_blank'); return false;">ebuyer</a></button> 				<!-- The code line "'_blank'", will open the website on a new tab window-->
+				<button onclick=" window.open('https://www.overclockers.co.uk/search?sSearch=rtx+30+series', '_blank'); return false;">overclockers UK</button>
+				<button onclick=" window.open('https://www.pcspecialist.co.uk/desktop-pcs/nvidia-rtx-30/','_blank'); return false;">PC SPECIALIST</button>
+				</div>
+			</div>
+			<div class= "buttons">
+				<div class="rtx3080">
+				<h2>RTX 3080</h2> 				<!-- Simple header text, positionel on  the top of the buttons to let user know which website sells that spefic product-->
+				<button onclick=" window.open('https://www.ebuyer.com/nvidia/geforce-rtx-30-series', '_blank'); return false;">ebuyer</button>
+				<button onclick=" window.open('https://www.overclockers.co.uk/search?sSearch=rtx+30+series', '_blank'); return false;">overclockers UK</button>
+				<button onclick=" window.open('https://www.cyberpowersystem.co.uk/page/desktop-gaming-pc/nvidia/geforce-rtx-30-series/', '_blank'); return false;">CYBERPOWERPC</button></a>
+				</div>
+			</div>
+			
+			<div class= "buttons">
+				<div class="rtx3070">
+				<h2>RTX 3070</h2>				<!-- Simple header text, positionel on  the top of the buttons to let user know which website sells that spefic product-->
+				<button onclick=" window.open('https://www.ebuyer.com/nvidia/geforce-rtx-30-series', '_blank'); return false;">ebuyer</button>
+				<button onclick=" window.open('https://www.amazon.co.uk/s?k=rtx+3070&ref=nb_sb_noss_1', '_blank'); return false;">Amazon</button> 
+				<button onclick=" window.open('https://www.scan.co.uk/shops/nvidia/rtx-30-series?utm_campaign=nVidia&utm_source=gethatch.com&utm_medium=wtb', '_blank'); return false;">SCAN</button>
+				</div>
+			</div>
+	</div>
+</body>		<!--Closing the body section of the file-->
+</html>		<!--Closing the HTML file-->

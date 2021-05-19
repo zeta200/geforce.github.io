@@ -1,0 +1,221 @@
+*{									/* The following font, margi, and padding will be applied to the whole page  */
+	margin: 0;
+	padding: 0;	
+	font-family: sans-serif; 
+}
+.main{								/*The following code lines will modify the main section of the html page */
+	width: 100%;					/*Usining 100% of the page width */
+	height: 100vh;					/*100vh = 100% of the viewport height.*/
+	position:relative;				/* Keep the main section to his normal position*/
+	overflow: hidden;				/* overflow:hidden prevents scrollbars from showing up*/
+	background-image: linear-gradient(to right, #66ff66, #33ccff);
+}
+
+.nav{								/* This is for the navigation bar section */
+	width:100%;						/* Using the full width of the page*/
+	position: sticky;				/* The navogation bar will be positioned depending on the other items position*/
+	margin: 20px auto;				/* Applying 20px on top/bottom marging and leaving to the programme for the left/right sides of the margin */
+	display: inline-block;			/*Allows to set a width and height  on the element, and make sure the margins are rispected*/
+	align-items: left;
+}
+
+
+.logo{								/* The following code line, will locate the logo and make sure it stays in a fixed position */
+	float:left;
+	position:absolute;
+	top:-30px;
+	left:50px;
+}
+.logo img{							/* Stating the width of the logo, the image of the logo will be resized to 150px*/
+	width: 150px;
+}
+.nav-links {						/* Navigaton bar boxes */
+	flex: 1;						
+	text-align: right;				/* Aligning the text inside the navigation bar to the right of web page  */
+	padding: 15 px;					/* Applying padding around the box surrounding the text 15px */		
+	margin: 0px 0px;				/* all sides 0 margin */	
+	background:#fff;				/* background colour of the navigation bar is white or #fff */	
+	font-weight: bold;				/* the text whith in the box will be shown in bold */
+}
+
+.nav-links ul li {					/* The list of text that we created inside the navigation bar, will be postioned center, applying padding around the text 30px and left/right side margin to 20px */
+	text-align: center;
+	display: inline-block;
+	padding: 30px;
+	margin: 0 20px;
+	
+}
+.nav-links ul li:hover {			/* When ever the user will go over the navigation bar, each box contaning a different text, will be colored in #33ccff  */
+  background-color: #33ccff;
+ `
+}
+.nav-links ul li a{					/* Remove any typeo of decoration such as underlines and changing the text colour to black */
+	color: #000;
+	text-decoration: none;
+
+}
+.information{						/* The information section, where the content wil be displayed */
+	width: 1000px;					/* Stateing the amount of space required */
+	height: 1000px;					/* Stateing the amount of space required */
+	position: absolute;
+	top: 9.9%;						/* How much far this section is from top of the page */
+	left: 0;
+	transform: traslateY(-50%);		/* To make sure is vertically centered */
+}
+#circle{							/* Creating a circle of and positioning it */
+	width: 1000px;
+	height: 1000px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-radius: 50%;
+	transform: rotate(0deg);		/* This will rotate the circle once at 0 degree*/
+	transition: 1s;					/* The duration of the animation*/
+}
+.RTX3090{							/* Each GPU image will be resize following the same width 1500px */
+	width: 1500px;
+	position: absolute;
+	top: 50%;						 /*Postioned in the same place */
+	left: 25%;
+	transform: translateY(-50%);	/* To make sure is vertically centered */
+	z-index:1;						/* Positioned element and its descendants or flex items*/
+}
+
+.feature img{						/* Resize images used in feature section*/
+	width: 70px
+}
+.feature{							/* Modifing the colour of the feature section and making sure the position is fixed */
+	position: absolute;
+	display: flex;					/* flex container expands items to fill available free space*/
+	color:#fff;
+}
+.feature div {						
+	margin-left: 30px;
+}
+
+.feature div p{						/* Top marging of the paragraph inside the feature section*/
+	margin-top: 8px;
+}
+.one{								/* This the first feature section location, inside the circle*/
+	top:450px;
+	right:50px;
+}
+.two{								/* This the second feature section location, inside the circle*/
+	top:150px;
+	right:350px;
+	transform: rotate(-90deg);		/* The text and image will be rotated - 90 degrees*/
+}
+.three{								/* This the third feature section location , inside the circle*/
+	bottom:450px;
+	left:50px;
+	transform: rotate(-180deg);		/* The text and image will be rotated - 180 degrees*/
+}
+.four{								/* This the fourth feature section location , inside the circle*/
+	bottom:150px;
+	right:350px;
+	transform: rotate(-270deg);		/* The text and image will be rotated - 270 degrees*/
+}
+
+
+.controls{							/* Here we state where the controls arrows and the text will be located*/
+	position: absolute;
+	right:200px	;
+	top:550px;
+	transform: translateY(-50%);
+	text-align: center;
+	
+}
+
+.controls h3{						/* text inside the arrows, size, margin and colour*/
+	margin: 15px 0;
+	color:#fff;
+}
+
+#upBT{								/* Size of the arrows to control the rotation of the circle*/
+	width:35px;
+	cursor: pointer;
+}
+
+#downBT{							/* Size of the arrows to control the rotation of the circle*/
+	width:35px;
+	cursor: pointer;
+	transform: rotate(180deg);
+}
+
+.overlay{							/* Borders used to create a overlay to hide 3/4 of the circle in white */
+	width:0;
+	height:0;
+	border-top: 500px solid #fff;
+	border-right: 500px solid transparent;
+	border-bottom: 500px solid #fff;
+	border-left: 500px solid #fff;
+	position: absolute;
+	left:0;
+	top:0;	
+	
+}
+
+.button2 {							/* this will modify the one button available in the middle of the page in each product page/
+	background-color: white; 
+	color: black; 
+	border: none;
+}
+
+.button2:hover {					/* When ever the user will go over the navigation bar, each box contaning a different text, will be colored in white  */
+	background-color: #008CBA;
+	color: white;
+}
+
+.header2{							/* Modifies the header section of the Availability page  */
+	position: absolute;
+	display: flex;
+	color:#fff;
+	top: 25%;						/* Position */
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);	/* centered */
+	transform: translate(-50%, -50%);
+}
+
+.buttons button {					/* Modifying Buttons available in the Availability page*/
+	background-color: #0AB6F6; 
+	border: 1px solid #fff;
+	color: white; 
+	padding: 10px 24px; 
+	cursor: pointer; 
+	width: 50%; 
+	display: block;
+}
+
+.buttons button:not(:last-child) {				/* removing black borders from the buttons */
+	border-bottom: none; 
+}
+
+.buttons button:hover {							/* When the user will pass over each button, the following gradient colour will appear inside the button*/
+	background-image: linear-gradient(to right, #66ff66, #33ccff);
+}
+
+.rtx3090{										/* Each  GPU has three set of buttons*/
+	width:500px;								/* Changing the width of the buttons to 500px*/
+	position: absolute;
+	top: 50%;									/* The buttons for the first GPU are located on left side of the page*/
+	left: 25%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.rtx3080{										
+	width:500px;
+	position: absolute;
+	top: 50%;									/* The buttons for the first GPU are located in center of the page*/
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);	
+	transform: translate(-50%, -50%);
+}
+.rtx3070{										
+	width:500px;
+	position: absolute;
+	top: 50%;									/* The buttons for the first GPU are located in the right side of the page*/
+	left: 75%;
+	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}

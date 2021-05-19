@@ -1,0 +1,108 @@
+<html>														<!-- Starting the HTML file-->
+<head>														<!-- Header section of the file-->
+	<title> Interactive website  </title>                   <!-- Title of the website -->
+	<link rel= "stylesheet" href= "style.css">				<!-- By using "href= "style.css", we are calling the external CSS file -->
+															<!-- We will use the same external CSS file for all our page's layout -->
+</head>														<!-- Closing the header section of the file-->
+<body>														<!-- Opening body section of the page-->
+	
+	<div class = "main">												<!-- Using the tag div, to declare that this is the main section of the page.
+																			The attribute name is "main" and it will be used on CSS file to modify the background colour and decide hight and width of the pages-->	
+		<nav>															<!-- Using the tag nav to declar, this is the navigation bar section-->
+			<div class = "logo"> <!-- section for the logo, calling the class logo, which will be used on the CSS file to change position and size of the logo-->
+				<a href = "Index.html"><img src = "images/logo.png"></a> <!--searching for the image .png and linking the logo to the indexp page --->
+			</div>
+			<div class= "nav-links"><!-- Attribut named nav-links, to contain a list of the words -->
+				<ul>				<!-- Each word will be linked a specif page html page, so when ever is selected, the user will redirect to that page -->
+					<li><a href = "Index.html"> Home </a></li>   <!-- Redirect to index/home page-->
+					<li><a href = "RTX3080.html"> RTX 3080</a></li> <!-- Redirect to second product page page-->
+					<li><a href = "RTX3070.html"> RTX 3070</a></li> <!-- Redirect to third product page page-->
+					<li><a href = "Availability.html"> Availability </a></li> <!-- Redirect to availability page page-->
+				</ul>
+			</div>
+		</nav>
+		
+		<div class = "information"> <!-- This section it's the content section of the page, the product will be show, with the descriptio and interactive action that the user can do -->
+			<div style = "position:relative; left:1050px; top:100px;"> <!-- Applying inline CSS to position a button within the page-->
+			<button class="button button2" onClick="location.href='Availability.html'" style="background-color:transparent; font-weight: bold;font-size:20px;text-align: center;)">CHECK AVAILABILITY!</button><!-- After creating the button, applying more inline css to change background colour of the button, the font size of the text inside and align of it center -->
+			</div> <!--The button is also linked to the html page Availability, when pressed the user will redirected-->
+			
+			<div style = "position:relative; left:950px; top:150px; background-color:transparent; font-weight: bold;font-size:16px;text-align:justify;"> <!-- More inlise css to position the header and paragraph to an appropriate location-->
+			<h1> RTX 3080</h1>
+			<p>The GeForce RTX™ 3080, it’s powered by Ampere <br> NVIDIA’s 2nd gen RTX architecture <br>doubling down on ray tracing and AI performance with <br>enhanced Ray Tracing (RT) Cores, Tensor Cores,<br>and new streaming multiprocessors.<br>
+			Plus, it features a staggering 10 GB of G6X memory,<br> all to deliver the ultimate gaming experience.</p> <!--The tag <br> produces a line break, which is useful to organsie the text in a small space-->
+			</div>
+			
+			<div class= "overlay"> </div>							<!-- the attribute overlay, will be used in the external CSS file to cover portion of the website and text, to create a good looking design-->	
+			<img src ="images/rtx3090.png" class = "RTX3090">		<!-- searchign and displaying the image of the product, the attribute RTX3090 will be used in the CSS file to modify position and size of the image-->
+			<div id = "circle">										<!-- As the attribute name may suggest, in the following section all text and images will be part of the cricle, the circle will be devided in 4 section-->
+																	<!-- And each section will contain a feature of the GPU -->
+				<div class = "feature one">							<!-- The attribute "feature one" and all the text and images that is iside it, will be located inside the circle in a specfic location-->
+					<div>
+						<h1> NVIDIA CUDA Cores</h1> <!-- Text which will be displayed in a specific the section of the circle, the location will be decided on the external CSS file -->
+						<p> 8704 Cores</p>
+					</div>
+				</div>
+				
+				<div class = "feature two"> 		<!-- The attribute "feature two" and all the text and images that is iside it, will be located inside the circle in a specfic location-->
+					<img src = "images/speed.png">	<!-- Searching and than displaying the image, which make the user visually understand, what's the feature is talking about -->
+					<div>
+						<h1> Boost Clock</h1>		<!-- Text which will be displayed in a specific the section of the circle, the location will be decided on the external CSS file -->
+						<p> 1.71 GHz</p>
+					</div>
+				</div>
+				
+				<div class = "feature three">		<!-- The attribute "feature three" and all the text and images that is iside it, will be located inside the circle in a specfic location-->
+					<img src = "images/ram.png">	<!-- Searching and than displaying the image, which make the user visually understand, what's the feature is talking about -->
+					<div>
+						<h1> Memory Size</h1>		<!-- Text which will be displayed in a specific the section of the circle, the location will be decided on the external CSS file -->
+						<p> 10 GB</p>
+					</div>
+				</div>
+				
+				<div class = "feature four">		<!-- The attribute "feature four" and all the text and images that is iside it, will be located inside the circle in a specfic location-->
+					<img src = "images/ram.png">	<!-- Searching and than displaying the image, which make the user visually understand, what's the feature is talking about -->
+					<div>
+						<h1> Memory Type</h1>		<!-- Text which will be displayed in a specific the section of the circle, the location will be decided on the external CSS file -->
+						<p> GDDR6X Memory</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="controls">										<!--This section is dedicated to controls of the circle, two images of arrows will be displayed on screen to let user spin the circle, after each the up arrow or down arrow is slected a feature will be revialed on screen-->
+			<img src="images\arrow.png" id= "upBT" >        <!-- Up arrow--, which is also called on external CSS file-->
+			<h3>Specs</h3>
+			<img src= "images\arrow.png" id= "downBT">      <!--Down arrow, by using the same image but rotate 180 degrees, on the external CSS file, by calling the id "downBT" -->
+		</div>
+	</div>
+	
+	<script>												<!--The following script will spin circle created before and make sure it rotates enough to show one feature at the time-->
+		var circle = document.getElementById("circle");		<!--Here we are stating the variables name and calling the appropriate class and id, here we are callign the class circle -->
+		var upBT = document.getElementById("upBT");			<!--Calling the id "upBT" the up arrow -->
+		var downBT = document.getElementById("downBT");		<!--Calling the id "downBT" the down arrow  -->
+		
+		
+		var rotateValue = circle.style.transform;			<!-- Stating that the variable called "rotateValue" will make circle move -->
+		var rotateSum;										<!-- Stating another varible-->
+		
+		
+		upBT.onclick = function()							<!--When ever the up arrow is clicked, the circle will rotate "-90 degrees" -->
+		{													
+			rotateSum = rotateValue + "rotate(-90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum; 
+			
+		}
+		
+		downBT.onclick = function()							<!--When ever the down arrow is clicked, the circle will rotate "+90 degrees" -->			
+		{
+			rotateSum = rotateValue + "rotate(90deg)";
+			circle.style.transform = rotateSum;
+			rotateValue = rotateSum; 
+			
+		}
+	</script>
+
+</body>														<!--Closing the body section of the file-->
+</html>														<!--Closing the HTML file-->
